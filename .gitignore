@@ -1,0 +1,153 @@
+
+# =====================================================================
+
+
+# ---------------------------------------------------------------------
+#  1. Carpetas que Unity genera solo
+#  Se reconstruyen a partir de Assets + .meta + Packages + ProjectSettings,
+#  así que subirlas solo agrega peso (Library puede pesar varios GB).
+# ---------------------------------------------------------------------
+.utmp/
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+*.log
+
+# Configuración personal del editor (layout, preferencias tuyas).
+/[Uu]ser[Ss]ettings/
+
+# Capturas del Memory Profiler: pesan mucho y pueden tener datos sensibles.
+/[Mm]emoryCaptures/
+
+# Grabaciones del Unity Recorder: pesan mucho.
+/[Rr]ecordings/
+
+# Escenas temporales que crean los tests en modo Play.
+InitTestScene*.unity*
+/[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+# Caché que Unity genera dentro de Assets.
+/[Aa]ssets/[Ss]ceneDependencyCache*
+
+# Archivos autogenerados de UI Toolkit.
+/UIElementsSchema/
+
+
+# ---------------------------------------------------------------------
+#  2. Archivos de editores de código (Visual Studio, Rider)
+#  Unity regenera los .csproj y .sln cada vez que abre el proyecto,
+#  y las cachés del IDE son personales de tu compu.
+# ---------------------------------------------------------------------
+# Caché de Visual Studio.
+.vs/
+
+# Rider (por si algún día lo usás).
+.idea/
+*.DotSettings.user
+/[Aa]ssets/Plugins/Editor/JetBrains*
+
+# Proyectos y soluciones autogenerados.
+ExportedObj/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.slnx
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.opendb
+*.VC.db
+
+# Archivos de depuración (símbolos). Se generan al compilar.
+*.pdb
+*.mdb
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Caché de Gradle (builds de Android).
+.gradle/
+
+
+# ---------------------------------------------------------------------
+#  3. Builds y exportaciones
+#  Son el resultado de compilar el juego, no el código fuente.
+#  Si querés publicar una build, va en "Releases" de GitHub, no en el repo.
+# ---------------------------------------------------------------------
+*.apk
+*.aab
+*.app
+*.unitypackage
+*.unitypackage.meta
+
+
+# ---------------------------------------------------------------------
+#  4. Archivos que se generan en crashes o por herramientas
+# ---------------------------------------------------------------------
+sysinfo.txt
+mono_crash.*
+crashlytics-build.properties
+
+# Blender guarda backups .blend1 automáticamente: no hacen falta.
+*.blend1
+*.blend1.meta
+
+
+# ---------------------------------------------------------------------
+#  5. Addressables y Visual Scripting (solo aplican si los usás)
+#  Si no usás estos paquetes, estas reglas no molestan.
+# ---------------------------------------------------------------------
+/ServerData
+/[Aa]ssets/StreamingAssets/aa*
+/[Aa]ssets/AddressableAssetsData/link.xml*
+/[Aa]ssets/Addressables_Temp*
+/[Aa]ssets/AddressableAssetsData/*/*.bin*
+
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db.meta
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers.meta
+
+
+# ---------------------------------------------------------------------
+#  6. Basura del sistema operativo
+# ---------------------------------------------------------------------
+# Windows
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Mac (por si algún día abrís el proyecto en una)
+.DS_Store
+._*
+
+
+# ---------------------------------------------------------------------
+#  7. Archivos sensibles
+#  Claves y firmas NO van a un repo, aunque sea privado.
+#  OJO con el keystore de Android: si lo perdés no podés actualizar
+#  el juego en la tienda. Guardalo con backup en otro lado.
+# ---------------------------------------------------------------------
+*.key
+*.secret
+*.keystore
+*.jks
+
+
+# ---------------------------------------------------------------------
+#  Lo que NO se ignora a propósito (para que no lo agregues por error):
+#  - Los .meta de Assets: guardan el ID de cada asset.
+#  - Packages/manifest.json y Packages/packages-lock.json.
+#  - ProjectSettings/.
+#  - Las .dll de plugins dentro de Assets (si las ignorás, el proyecto
+#    no compila al clonarlo en otra compu).
+# ---------------------------------------------------------------------

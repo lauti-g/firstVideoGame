@@ -142,6 +142,10 @@ $RECYCLE.BIN/
 *.keystore
 *.jks
 
+# Módulo de Cloud Code: archivos generados al compilar
+ModuloJuego/**/[Bb]in/
+ModuloJuego/**/[Oo]bj/
+
 
 # ---------------------------------------------------------------------
 #  Lo que NO se ignora a propósito (para que no lo agregues por error):
